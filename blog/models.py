@@ -35,6 +35,7 @@ class Post(models.Model):
     )
 
     title = models.CharField(max_length=255)
+    image = models.ImageField(null=True, upload_to='uploads/')
     slug = models.SlugField()
     content = tinymce_models.HTMLField()
     categories = models.ManyToManyField(Category)

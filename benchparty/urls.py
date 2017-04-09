@@ -25,6 +25,6 @@ urlpatterns = [
     url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'blog/', include('blog.urls')),
+    url(r'^blog/', include('blog.urls')),
     url(r'', include('page.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
