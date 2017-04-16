@@ -24,6 +24,12 @@ class Category(MPTTModel):
     class Meta:
         verbose_name_plural = "categories"
 
+    def natural_key(self):
+        return {
+            'slug': self.slug,
+            'name': self.name
+        }
+
 
 class Post(models.Model):
     DRAFT = 0
